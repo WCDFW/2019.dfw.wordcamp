@@ -1286,30 +1286,53 @@ body:not(.home) #primary-sidebar .widget {
 
 body:not(.home) #primary-sidebar .widget .widget-title {
 	font-size: 2.5rem;
-	margin-bottom: 0;
 	width: auto;
 }
 
-body:not(.home) #primary-sidebar .widget_blog_subscription form,
-body:not(.home) #primary-sidebar .widget_blog_subscription form #subscribe-email,
-body:not(.home) #primary-sidebar .widget_blog_subscription form #subscribe-submit {
+body:not(.home) #primary-sidebar .widget.jetpack_subscription_widget {
+	margin-bottom: 1.5rem;
+}
+
+.jetpack_subscription_widget .widgettitle:empty {
+	display: none;
+}
+
+body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form,
+body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form #subscribe-email,
+body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form #subscribe-submit {
 	display: inline-block;
 	margin-bottom: 0;
 	vertical-align: middle;
 }
 
-body:not(.home) #primary-sidebar .widget_blog_subscription form {
+body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form {
+	max-width: 60%;
 	width: 100%;
 }
 
-body:not(.home) #primary-sidebar .widget_blog_subscription form #subscribe-email {
-	width: 30vw;
+body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form #subscribe-email {
+	width: calc(100% - 200px);
 }
 
-body:not(.home) #primary-sidebar .widget_blog_subscription form input[type="email"],
-body:not(.home) #primary-sidebar .widget_blog_subscription form input[type="text"] {
+body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form #subscribe-submit {
+	width: 190px;
+}
+
+body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form input[type="email"],
+body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form input[type="text"] {
 	background: #fff;
 	border: 3px solid;
+}
+
+body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form input[type="email"],
+body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form #subscribe-submit button[type="submit"] {
+	margin-left: 5px;
+	margin-right: 5px;
+	width: calc(100% - 10px);
+}
+
+.post .jetpack_subscription_widget {
+	margin-bottom: 1rem;
 }
 
 /* ENTRY CONTENT
@@ -2189,13 +2212,13 @@ body .site-navigation .twitter-link a {
 		padding-top: 4rem;
 	}
 
+	body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form {
+		max-width: 100%;
+	}
+
 	body:not(.home) #primary-sidebar .widget_blog_subscription form input[type="email"],
 	body:not(.home) #primary-sidebar .widget_blog_subscription form input[type="text"] {
 		padding: .76rem 1rem;
-	}
-
-	body:not(.home) #primary-sidebar .widget_blog_subscription form #subscribe-email {
-		min-width: 45vw;
 	}
 
 	body:not(.home) #primary-sidebar .widget_blog_subscription form button[type="submit"] {
@@ -2553,6 +2576,10 @@ body .site-navigation .twitter-link a {
 
 	body:not(.home) #primary .entry-content > p:first-child > img:first-child {
 		margin-bottom: 0;
+	}
+
+	body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form #subscribe-email {
+		width: 100%;
 	}
 
 	/* Sponsors */
