@@ -1297,6 +1297,18 @@ body:not(.home) #primary-sidebar .widget.jetpack_subscription_widget {
 	display: none;
 }
 
+.jetpack_subscription_widget .success {
+	background: rgba(0, 166, 94, 0.05);
+	border: 3px solid #00a65e;
+	font-size: smaller;
+	padding: 1.5rem 2rem 1px 2rem;
+}
+
+.jetpack_subscription_widget .error {
+	background: rgba(212, 30, 78, 0.05);
+	border: 3px solid #d41e4e;
+}
+
 body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form,
 body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form #subscribe-email,
 body:not(.home):not(.page-slug-front-page) .jetpack_subscription_widget form #subscribe-submit {
